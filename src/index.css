@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    /* Make all fonts bolder globally */
+    font-family: 'Inter', sans-serif;
+    /* Ensure consistent font family if not already inherited */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

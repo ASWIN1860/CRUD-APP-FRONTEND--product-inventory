@@ -1,0 +1,300 @@
+/* Dark Theme Layout */
+.inventory-page-wrapper {
+    background-color: #0f172a;
+    /* Deep Navy from your Home Page */
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Glowing Orbs */
+.bg-blur-1 {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 212, 255, 0.1);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+.bg-blur-2 {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 212, 255, 0.08);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.highlight-cyan {
+    color: #00d4ff;
+}
+
+/* Glassmorphism Card */
+.inventory-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* Search Input Styling */
+.search-group {
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-icon {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-right: none !important;
+    color: #00d4ff !important;
+}
+
+.search-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    border-left: none !important;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Table Styling */
+.inventory-table {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.inventory-table thead {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.inventory-table thead th {
+    color: #00d4ff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 15px 10px;
+}
+
+.inventory-table tbody td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 18px 10px;
+    vertical-align: middle;
+}
+
+.inventory-table tbody tr:hover {
+    background: rgba(0, 212, 255, 0.03) !important;
+}
+
+/* Custom Badges */
+.badge-stock-in {
+    background: rgba(40, 167, 69, 0.15) !important;
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    padding: 6px 12px !important;
+    font-weight: 500;
+}
+
+.badge-stock-out {
+    background: rgba(220, 53, 69, 0.15) !important;
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    padding: 6px 12px !important;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-cyan {
+    background-color: #00d4ff;
+    color: #0f172a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-cyan:hover {
+    background-color: #00b8e6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 6px 10px;
+    transition: 0.2s;
+}
+
+.edit-btn:hover {
+    background: rgba(0, 212, 255, 0.2);
+}
+
+.delete-btn:hover {
+    background: rgba(220, 53, 69, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .inventory-page-wrapper {
+        overflow-x: hidden;
+        /* Enforce no scroll */
+        width: 100%;
+    }
+
+    .bg-blur-1 {
+        width: 150px;
+        height: 150px;
+        top: -30px;
+        left: -30px;
+    }
+
+    .bg-blur-2 {
+        width: 120px;
+        height: 120px;
+        bottom: -30px;
+        right: -30px;
+    }
+
+    .inventory-card {
+        border-radius: 15px !important;
+        margin-bottom: 20px;
+        /* Space at bottom */
+    }
+
+    /* Headline Adjustment for Mobile */
+    h2 {
+        font-size: 1.5rem !important;
+        /* Smaller text */
+        width: fit-content;
+        /* Don't take full width */
+        margin-bottom: 10px;
+        display: block;
+        /* Or flex if d-flex is on element */
+    }
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .search-group {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Transform Table to Cards for Mobile */
+    .inventory-table thead {
+        display: none !important;
+    }
+
+    .inventory-table tbody,
+    .inventory-table tr,
+    .inventory-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .inventory-table tr {
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 25px 20px;
+        /* More padding as requested */
+    }
+
+    .inventory-table td {
+        display: flex;
+        flex-direction: column;
+        /* Vertical stack for Label + Value */
+        justify-content: center;
+        align-items: center;
+        /* Center align */
+        text-align: center;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        gap: 5px;
+        /* Space between Label and Content */
+    }
+
+    .inventory-table td:last-child {
+        border-bottom: none !important;
+        flex-direction: row;
+        /* Keep buttons side-by-side for better UX */
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        margin-top: 10px;
+    }
+
+    /* Add labels via CSS so we don't touch JSX */
+    /* Common style for labels */
+    .inventory-table td::before {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+        color: #00d4ff;
+        opacity: 0.7;
+        margin-bottom: 2px;
+    }
+
+    .inventory-table td:nth-of-type(1)::before {
+        content: "Product Name";
+    }
+
+    .inventory-table td:nth-of-type(1) {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+
+    .inventory-table td:nth-of-type(2)::before {
+        content: "Price";
+    }
+
+    .inventory-table td:nth-of-type(2) {
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+
+    .inventory-table td:nth-of-type(3)::before {
+        content: "Stock";
+    }
+
+    .inventory-table td:nth-of-type(3) {
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+
+    .inventory-table td:nth-of-type(4)::before {
+        content: "Status";
+    }
+
+    /* Ensure table doesn't force width */
+    .table-responsive {
+        border: none;
+        overflow-x: hidden !important;
+    }
+
+    .btn-cyan {
+        width: 100%;
+        margin-top: 15px;
+        display: block;
+    }
+}

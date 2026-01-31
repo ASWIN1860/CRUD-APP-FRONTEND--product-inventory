@@ -1,0 +1,107 @@
+/* Container and Layout */
+.inventory-wrapper {
+    background-color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+/* Decorative background blur */
+.blur-circle {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 212, 255, 0.15);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Typography & Colors */
+.highlight-text {
+    color: #00d4ff;
+}
+
+.status-badge {
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.subtext {
+    opacity: 0.7;
+}
+
+/* Interactive Elements */
+.main-button {
+    background-color: #00d4ff;
+    color: #0f172a;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.main-button:hover {
+    background-color: #00b8e6;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3) !important;
+}
+
+.main-button:active {
+    transform: translateY(0);
+}
+
+/* Footer Decoration */
+.footer-note {
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .inventory-wrapper {
+        padding: 40px 20px;
+        align-items: center;
+    }
+
+    .blur-circle {
+        width: 250px;
+        height: 250px;
+        right: -10%;
+        top: -5%;
+    }
+
+    .display-2 {
+        font-size: 2.5rem !important;
+    }
+
+    .lead {
+        font-size: 1rem !important;
+    }
+
+    .main-button {
+        width: 100%;
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-2 {
+        font-size: 2rem !important;
+    }
+
+    .blur-circle {
+        opacity: 0.6;
+    }
+}
