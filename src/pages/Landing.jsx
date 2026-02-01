@@ -105,7 +105,7 @@ const Landing = () => {
               <tbody>
                 {showData && showData.length > 0 ? (
                   <>
-                    {showData.filter(item => item.name.toLowerCase().includes(searchKey.toLowerCase())).map((item) => (
+                    {showData.filter(item => (item.name || "").toLowerCase().includes(searchKey.toLowerCase())).map((item) => (
                       <tr key={item.id}>
                         <td className="ps-4 fw-medium text-dark">
                           {item.name}
